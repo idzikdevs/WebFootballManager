@@ -23,6 +23,8 @@ public class Player {
     private String surname;
     @Column(name = "skill",nullable = false, unique = false)
     private byte skill;
+    @Column(name="hash")
+    private String hash;
     @ManyToOne(targetEntity = Player.class,cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinColumn(name = "fk_club")
     private String club;
