@@ -25,7 +25,7 @@ public class Player {
     private byte skill;
     @Column(name="hash")
     private String hash;
-    @ManyToOne(targetEntity = Player.class,cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+    @ManyToOne(targetEntity = Club.class,cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinColumn(name = "fk_club")
-    private String club;
+    private Club club;
 }
